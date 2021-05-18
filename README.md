@@ -8,6 +8,7 @@ Terceiro Desafio do Grupo de Desafios NLP. Promovido pelos professores Leonardo 
 
 - [NLP for Question Answering](https://qa.fastforwardlabs.com/)
 
-- [Fine-tuning with custom datasets — transformers 4.5.0.dev0 documentation](https://huggingface.co/transformers/custom_datasets.html#question-answering-with-squad-2-0)
+- [Fine-tuning with custom datasets — transformers 4.5.0.dev0 documentation](https://huggingface.co/transformers/custom_datasets.html#question-answering-with-squad-2-0){:target="_blank"}
 
   
+
