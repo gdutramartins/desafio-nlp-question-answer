@@ -4,11 +4,29 @@ Terceiro Desafio do Grupo de Desafios NLP. Promovido pelos professores Leonardo 
 
 
 
+O estudo deverá se desenvolver com modelos de *Sentence Similarity* utilizando BERT.
+
+
+
 **Links Utilizados**
 
 - [NLP for Question Answering](https://qa.fastforwardlabs.com/)
 
-- [Fine-tuning with custom datasets — transformers 4.5.0.dev0 documentation](https://huggingface.co/transformers/custom_datasets.html#question-answering-with-squad-2-0){:target="_blank"}
+- [Fine-tuning with custom datasets — transformers 4.5.0.dev0 documentation](https://huggingface.co/transformers/custom_datasets.html#question-answering-with-squad-2-0)
 
+- [Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/pdf/1908.10084.pdf)
+
+- [Exemplo Sentence Bert](https://colab.research.google.com/github/joeddav/blog/blob/master/_notebooks/2020-05-29-ZSL.ipynb#scrollTo=SM-4kizTBy9j)
+
+- [Exemplo Sentence Bert](https://colab.research.google.com/github/joeddav/blog/blob/master/_notebooks/2020-05-29-ZSL.ipynb#scrollTo=SM-4kizTBy9j)
+
+- [Sentence Transformer Sources](https://github.com/UKPLab/sentence-transformers)
+
+- [SentenceTransformers Documentation](https://www.sbert.net/index.html)
+
+  
+  
+  
+  
   
 
