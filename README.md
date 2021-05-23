@@ -1,10 +1,10 @@
-**Maio de 2021 - Question Answer**
+**Pós Graduação PUC/RJ - BI-Master - Maio de 2021**
+
+**Grupo de Desafios NLP - Tema: Question Answer**
 
 Terceiro Desafio do Grupo de Desafios NLP. Promovido pelos professores Leonardo Mendoza e Cristian Muñoz Villalobos. O objetivo do desafio será construir um modelo para resolver o problema de question answering publicado no Kaggle no link abaixo: https://www.kaggle.com/rtatman/questionanswer-dataset
 
-
-
-O estudo deverá se desenvolver com modelos de *Sentence Similarity* utilizando BERT.
+O trabalho será desenvolvido com modelos de *Sentence Similarity*, utilizando BERT (Sentence-Bert).
 
 
 
