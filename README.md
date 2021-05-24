@@ -24,6 +24,8 @@ O trabalho será desenvolvido com modelos de *Sentence Similarity*, utilizando B
 
 - [SentenceTransformers Documentation](https://www.sbert.net/index.html)
 
+- [Sentence Similarity With BERT | Towards Data Science](https://towardsdatascience.com/bert-for-measuring-text-similarity-eec91c6bf9e1)
+
   
   
   
