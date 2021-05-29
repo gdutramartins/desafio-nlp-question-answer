@@ -1,3 +1,6 @@
 dataset/
 squad-dataset/
 .ipynb_checkpoints/
+*.tfrecords
+*.zip
+*.jsonl
