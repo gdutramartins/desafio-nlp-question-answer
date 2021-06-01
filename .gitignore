@@ -4,3 +4,4 @@ squad-dataset/
 *.tfrecords
 *.zip
 *.jsonl
+__pycache__/
