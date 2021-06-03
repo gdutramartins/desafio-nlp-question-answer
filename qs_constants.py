@@ -23,7 +23,7 @@ class AppConstants():
     COL_CONTEXT_FILE = 3
     
     # indica perguntas que não seria possível encontrar contexto porque usam referencias que seriam substituidas em perguntas
-    TOKENS_COM_FALTA_CONTEXTO = ['he','his','him', 'they', 'them']
+    TOKENS_COM_FALTA_CONTEXTO = ['he','his','him', 'they', 'them', 'its']
     
     # metodos utilizados para busca de assunto
     # NER na pergunta e confronta com o assunto ou parte do nome do assunto
@@ -31,6 +31,8 @@ class AppConstants():
     # após o postag, utiliza o conjunto de "nouns" para fazer um match com o assunto
     METODO_BUSCA_ASSUNTO_NOUN_PERGUNTA = "POSTAG_NOUN"   
     # separa a pergunta e assunto em tokens, tentando fazer o match pela lemetização
-    METODO_BUSCA_ASSUNTO_LEMMA = "LEMMATIZATION" 
+    METODO_BUSCA_ASSUNTO_LEMMANIZATION = "LEMMATIZATION" 
+    # separa a pergunta e assunto em tokens, tentando fazer o match pela lemetização
+    METODO_BUSCA_ASSUNTO_STEMMER = "STEMMER" 
     # carrega os arquivos de contexto de cada assunto e extrai as entidades, tentando fazer um match com as entidades da pergunta
     METODO_BUSCA_ASSUNTO_NER_CONTEXTO = "NER_CONTEXTO" 
