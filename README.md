@@ -28,6 +28,22 @@ O resultado esperado é fazer com que o modelo responda a perguntas por similari
 - [Sentence Similarity With BERT | Towards Data Science](https://towardsdatascience.com/bert-for-measuring-text-similarity-eec91c6bf9e1)
 
   
+  ---
+  
+  **Solução Construida com apoio dos Mentores**
+  
+  Temos dois problemas no mesmo desafio:
+    1) Descobrir o assunto da pergunta - A similiaridade deve ser realizada com as perguntas que estão no mesmo asssunto (*ArticleTitle*). 
+    2) Encontrar a pergunta com maior similaridade - Dentre as perguntas que existem naquele contexto qual aquela que possui maior similaridade com a pergunta informada.
+  
+  **Parte 1 - Descobrind o asssunto da pergunta**
+  Para descobrir o assunto da pergunta utilizei um algorimo que tenta fazer o match com as seguintes condições seguindo a ordem de aplicação:
+    a) Encontrar as entidades (NER) da pergunta - Separo os tokens das entidades encontradas e busco dentro do array de tokens  
+    Utilizei spacy com o modelo lg. Esse é um ponto de muitas melhorias, poderiamos crir um modelo para melhor identificação de entidades, mais relacionadas com os assuntos do desafio. É uma melhoria interessante que deve gerar bons resultados na primeira parte do problema. 
+    
+    
+   
+  
   
   
   
