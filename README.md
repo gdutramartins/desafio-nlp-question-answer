@@ -36,10 +36,25 @@ O resultado esperado é fazer com que o modelo responda a perguntas por similari
     1) Descobrir o assunto da pergunta - A similiaridade deve ser realizada com as perguntas que estão no mesmo asssunto (*ArticleTitle*). 
     2) Encontrar a pergunta com maior similaridade - Dentre as perguntas que existem naquele contexto qual aquela que possui maior similaridade com a pergunta informada.
   
-  **Parte 1 - Descobrind o asssunto da pergunta**
-  Para descobrir o assunto da pergunta utilizei um algorimo que tenta fazer o match com as seguintes condições seguindo a ordem de aplicação:
-    a) Encontrar as entidades (NER) da pergunta - Separo os tokens das entidades encontradas e busco dentro do array de tokens  
-    Utilizei spacy com o modelo lg. Esse é um ponto de muitas melhorias, poderiamos crir um modelo para melhor identificação de entidades, mais relacionadas com os assuntos do desafio. É uma melhoria interessante que deve gerar bons resultados na primeira parte do problema. 
+  **Parte 1 - Descobrind o asssunto da pergunta**  
+  Para descobrir o assunto da pergunta utilizei um algoritmo que busca o match com as condições listadas abaixo na sua respectiva ordem:
+    a) Encontrar as entidades (NER) da pergunta - Após identificação separar os tokens das entidades encontradas e buscar dentro do array de strings que identificam o assunto.  
+    O modelo Spacy utilizado foi *en_core_web_lg*. Entendo que essa parte poderia ter várias melhorias, poderiamos treinar um novo modelo Spacy ou Bert para melhor identificação das entidades.
+    
+    b) Encontrar Nomes (noun chunks) da pergunta - Após identificação separar os tokens dos nomes encontrados e buscar dentro do array de strings que identificam o assunto.
+    O modelo Spacy utilizado foi *en_core_web_lg*
+    
+    c) Lemmanization - Lemmanization nos tokens do assunto e da pergunta para busca de algum match.
+    O modelo Spacy utilizado foi *en_core_web_lg*
+    
+    d) Stemmer - Stemmer nos tokens do assunto e da pergunta para buscar algum match.
+    Utilizado PorterStemmer da NLTK.
+    
+    e) Encontrar entidades (NER) nos arquivos texto (fonte) relacionados - Cada asssunto está relacionado com um ou mais arquivos texto, são a base de conhecimento para resposta da pergunta. Como última tentativa de fazer o match aplico NER nos arquivos e busco por algum match dos tokens das entidades encontradas na pergunta e nos arquivos.
+    
+    A reposta da busca por assunto pode retornar mais de uma opção e até encontrar assunto diferente do esperado, por esse motivo fizemos um teste com a base de perguntas. Foram considerados casso de sucesso quando encontra-se uma opção e ela está correta (I), quando a lista retornada tem a opção correta (II) ou ao buscar na lista de opções utiilzando a ordem de prioridade do match é encontrado o assunto. 
+    Deve-se consierar também que uma parte da base de perguntas utiliza referências implícitas ao assunto ('him', 'he', 'they', 'them', 'its'), consideramos esses casos como falhas, mas contabilizamos a parte já que se tivesse o nome ou entidade correto seriam identificados corretamente na maioria dos casos.
+    Segue abaixo as estatisticas de identificação de assunto (teste com a base de perguntas):
     
     
    
