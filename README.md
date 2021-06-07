@@ -5,16 +5,16 @@
 Terceiro Desafio do Grupo de Desafios NLP. Promovido pelos professores Leonardo Mendoza e Cristian Muñoz Villalobos. O objetivo do desafio será construir um modelo para resolver o problema de question similarity publicado no Kaggle no link abaixo: https://www.kaggle.com/rtatman/questionanswer-dataset
 
 O resultado esperado é fazer com que o modelo responda a perguntas por similaridade, ou seja, dada uma base de perguntas e respostas conhecidas (base de conhecimento), uma nova pergunta solicitada (existente ou não) será respondida com a resposta relacionada à pergunta da base com maior similaridade. 
-  
+
 &nbsp;   
 ---
 ## Solução Construida com apoio dos Mentores
-  
+
   Temos dois problemas no mesmo desafio:  
   1. Descobrir o assunto da pergunta - A similiaridade deve ser realizada com as perguntas que estão no mesmo asssunto (*ArticleTitle*).  
   2. Encontrar a pergunta com maior similaridade - Dentre as perguntas que existem naquele contexto qual aquela que possui maior similaridade com a pergunta informada.   
-  
-  
+
+
 ### Parte 1 - Identificando o asssunto da pergunta  
   Para descobrir o assunto da pergunta utilizei um algoritmo que busca o match com as condições listadas abaixo na sua respectiva ordem:  
     &nbsp;&nbsp;a) Encontrar as entidades (NER) da pergunta - Após identificação separar os tokens das entidades encontradas e buscar dentro do array de strings que identificam o assunto.  
@@ -39,20 +39,20 @@ O resultado esperado é fazer com que o modelo responda a perguntas por similari
     Total Encontradas: 1.950  
     Não Encontrados: 69  
     Identificação Incorreta: 183  
-    Qtd. Perguntas com referencia implícita(he, him, ...): --- (em andamento)    
+    Qtd. Perguntas com referencia implícita(he, him, ...): 178   
     &nbsp;      
-    
+
 Em nossa análise o resultado de identificação do assunto foi bastante satisfatório e com a melhoria do modelo NER poderia ser maior ainda.  
-   
+
   &nbsp;  
   ### Parte 2 - Busca por pergunta com maior similaridade 
-  
+
   A busca da pergunta com maior similiridade utiliza modelos pré-treinados para tratamento por sentença, conhecidos como SBERT ou Sentence Transformers eles são afinados para esse objetivo. 
   Em nossa abordagem capturamos o embedding da sentença, aplicamos mean polling descartando a parte da sentença vazia, ou seja, que não contém tokens, já que foi preenchida com vazio para normalização da sentenças (padding). A similaridade final é calculada por coseno dos embeddings das sentenças.
-  
+
   Para teste da solução construída montei um vetor de perguntas para que o programa identificasse o assunto e mostrasse as 3 maiores similaridades.
-  
-   
+
+
 **Pergunta: Was Abraham Lincoln the president of the United States?**  
 *3  respostas encontradas com similaridade maior que  0.7*  
 > Was Abraham Lincoln the first President of the United States?  -  tensor(0.9469)  
@@ -148,7 +148,7 @@ What is a person who plays the cello called?  -  tensor(0.8355)
 What position is used to play the cello?  -  tensor(0.8307)   
 
 &nbsp;  
-  
+
 
 
 ### Links Utilizados
